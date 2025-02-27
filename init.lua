@@ -893,6 +893,7 @@ require('lazy').setup({
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       vim.cmd 'colorscheme abstract'
+      vim.cmd 'highlight Visual guibg=#1c1c2c ctermbg=237'
     end,
   },
 
@@ -1012,3 +1013,7 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+vim.opt.expandtab = true -- Convert tabs to spaces
+vim.opt.tabstop = 4 -- 1 tab == 4 spaces when editing
+vim.opt.softtabstop = 4 -- Number of spaces per Tab (in insert mode)
+vim.opt.shiftwidth = 4 -- Number of spaces to use for each step of (auto)indent
